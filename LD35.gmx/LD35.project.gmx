@@ -17,6 +17,8 @@
     <sprite>sprites\spr_flower_purple</sprite>
     <sprite>sprites\spr_flower_red</sprite>
     <sprite>sprites\spr_flower_white</sprite>
+    <sprite>sprites\spr_mouse_normal</sprite>
+    <sprite>sprites\spr_mouse_target</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
