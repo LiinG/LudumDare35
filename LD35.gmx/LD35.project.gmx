@@ -11,6 +11,7 @@
     <sprite>sprites\spr_test_hunter</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_test2</sprite>
+    <sprite>sprites\spr_bush</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
