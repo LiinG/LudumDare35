@@ -1,12 +1,19 @@
 ///move_state()
 
 // Define input
-var right = keyboard_check(vk_right);
+/*var right = keyboard_check(vk_right);
 var left = keyboard_check(vk_left);
 var up = keyboard_check(vk_up);
 var down = keyboard_check(vk_down);
 var jump = keyboard_check(ord("D"));
-var jump_release = keyboard_check_released(ord("D"));
+var jump_release = keyboard_check_released(ord("D"));*/
+
+var right = keyboard_check(ord("D"));
+var left = keyboard_check(ord("Q"));
+var up = keyboard_check(ord("Z"));
+var down = keyboard_check(ord("S"));
+/*var jump = keyboard_check(ord("D"));
+var jump_release = keyboard_check_released(ord("D"));*/
 
 
 if (right) { // Set player's speed
