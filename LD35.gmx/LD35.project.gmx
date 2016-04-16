@@ -36,6 +36,7 @@
     <scripts name="Metamorphosable Scripts">
       <script>scripts\scr_metamorphoser.gml</script>
     </scripts>
+    <script>scripts\script11.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
