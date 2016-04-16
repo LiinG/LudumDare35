@@ -12,6 +12,7 @@
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_test2</sprite>
     <sprite>sprites\spr_bush</sprite>
+    <sprite>sprites\spr_bush_fruit</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
