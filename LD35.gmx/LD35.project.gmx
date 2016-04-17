@@ -25,7 +25,12 @@
     <sprite>sprites\spr_beach1</sprite>
     <sprite>sprites\spr_beach2</sprite>
     <sprite>sprites\spr_grass</sprite>
+    <sprite>sprites\spr_desert</sprite>
     <sprite>sprites\spr_grass_hill</sprite>
+    <sprite>sprites\spr_bird</sprite>
+    <sprite>sprites\spr_rock</sprite>
+    <sprite>sprites\spr_sea</sprite>
+    <sprite>sprites\spr_dear</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -60,16 +65,22 @@
     </objects>
     <objects name="Metamorphosable">
       <object>objects\obj_test</object>
+      <object>objects\obj_rock</object>
       <object>objects\obj_test2</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_beach1</object>
       <object>objects\obj_grass_hill</object>
       <object>objects\obj_grass</object>
+      <object>objects\obj_desert</object>
+      <object>objects\obj_sea</object>
       <object>objects\obj_beach2</object>
     </objects>
     <objects name="Dog">
       <object>objects\obj_dog</object>
+    </objects>
+    <objects name="Animals">
+      <object>objects\obj_dear</object>
     </objects>
   </objects>
   <rooms name="rooms">
