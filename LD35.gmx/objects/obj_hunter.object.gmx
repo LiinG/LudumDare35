@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>pathFinder_x = obj_player.x;
 pathFinder_y = obj_player.y;
+
+piste = 0;
 </string>
           </argument>
         </arguments>
@@ -148,11 +150,11 @@ pathFinder_y = obj_player.y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(distance_to_point(obj_player.x, obj_player.y) &lt; 100 &amp;&amp; player_spotted){ //Repéré
+            <string>if(distance_to_point(obj_player.x, obj_player.y) &lt; 100 &amp;&amp; obj_player.player_spotted){ //Repéré
     pathFinder_x = obj_player.x;
     pathFinder_y = obj_player.y;
     script_execute(scr_pathFinder);
-    if(distance_to_point(obj_player.x, obj_player.y) &lt; 50 &amp;&amp; player_spotted){ //Distance de tir
+    if(distance_to_point(obj_player.x, obj_player.y) &lt; 50 &amp;&amp; obj_player.player_spotted){ //Distance de tir
         draw_set_color(c_gray); 
     //Shoot!
     draw_text_colour(self.x, self.y, "SHOOT!", c_gray, c_gray, c_gray, c_gray, 1);
