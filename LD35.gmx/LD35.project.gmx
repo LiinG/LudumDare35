@@ -24,6 +24,8 @@
     <sprite>sprites\spr_hunter</sprite>
     <sprite>sprites\spr_beach1</sprite>
     <sprite>sprites\spr_beach2</sprite>
+    <sprite>sprites\spr_grass</sprite>
+    <sprite>sprites\spr_grass_hill</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -62,10 +64,13 @@
     </objects>
     <objects name="Background">
       <object>objects\obj_beach1</object>
+      <object>objects\obj_grass_hill</object>
+      <object>objects\obj_grass</object>
       <object>objects\obj_beach2</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_game</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
