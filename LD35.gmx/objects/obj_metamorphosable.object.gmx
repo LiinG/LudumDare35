@@ -72,8 +72,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_blend = make_colour_hsv(255, 255, random(255));
-cursor_sprite = spr_mouse_target;
+            <string>if !place_meeting(obj_player.x, obj_player.y, obj_solid){
+    image_blend = make_colour_hsv(255, 255, random(255));
+    cursor_sprite = spr_mouse_target;
+}
 </string>
           </argument>
         </arguments>

@@ -26,6 +26,7 @@
     <sprite>sprites\spr_beach2</sprite>
     <sprite>sprites\spr_grass</sprite>
     <sprite>sprites\spr_grass_hill</sprite>
+    <sprite>sprites\spr_test_dog</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -42,6 +43,7 @@
       <script>scripts\scr_ia_reload.gml</script>
       <script>scripts\scr_pathFinder.gml</script>
       <script>scripts\scr_check_zone.gml</script>
+      <script>scripts\scr_ia_dog.gml</script>
     </scripts>
     <scripts name="Metamorphosable Scripts">
       <script>scripts\scr_metamorphoser.gml</script>
@@ -73,8 +75,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_game</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
