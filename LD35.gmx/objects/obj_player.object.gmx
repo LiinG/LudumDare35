@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-5</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -30,8 +30,10 @@ hspd = 0;
 vspd = 0;
 breath = 100;
 state = scr_move;
+stress = 0;
 
-player_spotted = 1;
+player_spotted = 0;
+player_metamorphose = 0;
 </string>
           </argument>
         </arguments>
@@ -55,7 +57,16 @@ player_spotted = 1;
           <argument>
             <kind>1</kind>
             <string>scr_collision(obj_solid); // Call the move script
-script_execute(state);
+    script_execute(state);
+
+if(player_metamorphose = 1){
+    if(breath &gt; 0){
+        breath = breath -1 - stress;
+    }else{
+        sprite_index = spr_test_player;
+        player_metamorphose = 0;
+    }
+}
 </string>
           </argument>
         </arguments>

@@ -15,52 +15,60 @@ var down = keyboard_check(ord("S"));
 var run = keyboard_check(vk_space);
 //var jump_release = keyboard_check_released(ord("D"));
 
-if(!run || breath < 5 ){
-    breath = breath + 1;
-}
-
-if (right) { // Set player's speed
-    if(run && breath > 4){
-        hspd = spd + 4;
-        breath = breath - 5;
-    }else{
-        hspd = spd;
+if(obj_player.player_metamorphose = 1){
+    if(run){
+        obj_player.sprite_index = spr_test_player;
+        obj_player.player_metamorphose = 0;
     }
-}
-if (left) {
-    if(run && breath > 4){
-        hspd = -spd - 4;
-        breath = breath - 5;
-    }else{
-        hspd = -spd;
+}else{
+
+    if(!run || breath < 5 ){
+        breath = breath + 1;
     }
-}
-if (up) { // Set player's speed
-    if(run && breath > 4){
-        vspd = -spd - 4;
-        breath = breath - 5;
-    }else{
-        vspd = -spd;
+    
+    if (right) { // Set player's speed
+        if(run && breath > 4){
+            hspd = spd + 4;
+            breath = breath - 5;
+        }else{
+            hspd = spd;
+        }
     }
-}
-if (down) {
-    if(run && breath > 4){
-        vspd = spd + 4;
-        breath = breath - 5;
-    }else{
-        vspd = spd;
+    if (left) {
+        if(run && breath > 4){
+            hspd = -spd - 4;
+            breath = breath - 5;
+        }else{
+            hspd = -spd;
+        }
     }
-}
-
-if (hspd != 0) { // Set the player's image to the left or the right
-    image_xscale = sign(hspd);
-}
-
-
-
-if(!right && !left){ // Friction
-    hspd = 0;
-}
-if(!up && !down){ // Friction
-    vspd = 0;
+    if (up) { // Set player's speed
+        if(run && breath > 4){
+            vspd = -spd - 4;
+            breath = breath - 5;
+        }else{
+            vspd = -spd;
+        }
+    }
+    if (down) {
+        if(run && breath > 4){
+            vspd = spd + 4;
+            breath = breath - 5;
+        }else{
+            vspd = spd;
+        }
+    }
+    
+    if (hspd != 0) { // Set the player's image to the left or the right
+        image_xscale = sign(hspd);
+    }
+    
+    
+    
+    if(!right && !left){ // Friction
+        hspd = 0;
+    }
+    if(!up && !down){ // Friction
+        vspd = 0;
+    }
 }
