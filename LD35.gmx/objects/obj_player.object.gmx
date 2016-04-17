@@ -28,6 +28,7 @@
             <string>spd = 5;
 hspd = 0;
 vspd = 0;
+breath = 100;
 state = scr_move;
 </string>
           </argument>

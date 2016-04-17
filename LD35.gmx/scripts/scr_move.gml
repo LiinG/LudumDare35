@@ -12,22 +12,46 @@ var right = keyboard_check(ord("D"));
 var left = keyboard_check(ord("Q"));
 var up = keyboard_check(ord("Z"));
 var down = keyboard_check(ord("S"));
-/*var jump = keyboard_check(ord("D"));
-var jump_release = keyboard_check_released(ord("D"));*/
+var run = keyboard_check(vk_space);
+//var jump_release = keyboard_check_released(ord("D"));
 
+if(!run || breath < 5 ){
+    breath = breath + 1;
+}
 
 if (right) { // Set player's speed
-    hspd = spd;
+    if(run && breath > 4){
+        hspd = spd + 4;
+        breath = breath - 5;
+    }else{
+        hspd = spd;
+    }
 }
 if (left) {
-    hspd = -spd;
+    if(run && breath > 4){
+        hspd = -spd - 4;
+        breath = breath - 5;
+    }else{
+        hspd = -spd;
+    }
 }
 if (up) { // Set player's speed
-    vspd = -spd;
+    if(run && breath > 4){
+        vspd = -spd - 4;
+        breath = breath - 5;
+    }else{
+        vspd = -spd;
+    }
 }
 if (down) {
-    vspd = spd;
+    if(run && breath > 4){
+        vspd = spd + 4;
+        breath = breath - 5;
+    }else{
+        vspd = spd;
+    }
 }
+
 if (hspd != 0) { // Set the player's image to the left or the right
     image_xscale = sign(hspd);
 }

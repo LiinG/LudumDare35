@@ -11,6 +11,28 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>pathFinder_x = obj_player.x;
+pathFinder_y = obj_player.y;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>301</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -75,7 +97,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>250</string>
+            <string>120</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -126,15 +148,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(distance_to_point(obj_player.x, obj_player.y) &lt; 50){
-    draw_set_color(c_gray); 
+            <string>if(distance_to_point(obj_player.x, obj_player.y) &lt; 100 &amp;&amp; player_spotted){ //Repéré
+    pathFinder_x = obj_player.x;
+    pathFinder_y = obj_player.y;
+    script_execute(scr_pathFinder);
+    if(distance_to_point(obj_player.x, obj_player.y) &lt; 50 &amp;&amp; player_spotted){ //Distance de tir
+        draw_set_color(c_gray); 
     //Shoot!
     draw_text_colour(self.x, self.y, "SHOOT!", c_gray, c_gray, c_gray, c_gray, 1);
-    //show_message("SHOOT!");
+    show_message("SHOOT!");
     //draw_text(x, y, "SHOOT!");
+    }
 }
-else{
-    //script_execute(scr_pathFinder);
+else if (piste = 1){ //Pisté par le chien
+    //pathFinder_x = obj_player.x;
+    //pathFinder_y = obj_player.y;
+    script_execute(scr_pathFinder);
+}else{ //Mode patrouille
+    
 }
 </string>
           </argument>
@@ -163,30 +194,6 @@ else{
           <argument>
             <kind>4</kind>
             <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>250</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>2</string>
           </argument>
         </arguments>
       </action>

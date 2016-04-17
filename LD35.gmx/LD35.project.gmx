@@ -68,6 +68,9 @@
       <object>objects\obj_grass</object>
       <object>objects\obj_beach2</object>
     </objects>
+    <objects name="Dog">
+      <object>objects\obj_dog</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
