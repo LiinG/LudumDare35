@@ -19,6 +19,11 @@
     <sprite>sprites\spr_flower_white</sprite>
     <sprite>sprites\spr_mouse_normal</sprite>
     <sprite>sprites\spr_mouse_target</sprite>
+    <sprite>sprites\spr_dog</sprite>
+    <sprite>sprites\spr_bee</sprite>
+    <sprite>sprites\spr_hunter</sprite>
+    <sprite>sprites\spr_beach1</sprite>
+    <sprite>sprites\spr_beach2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -54,6 +59,10 @@
     <objects name="Metamorphosable">
       <object>objects\obj_test</object>
       <object>objects\obj_test2</object>
+    </objects>
+    <objects name="Background">
+      <object>objects\obj_beach1</object>
+      <object>objects\obj_beach2</object>
     </objects>
   </objects>
   <rooms name="rooms">
