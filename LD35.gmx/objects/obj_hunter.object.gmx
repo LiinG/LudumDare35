@@ -158,7 +158,7 @@ piste = 0;
         draw_set_color(c_gray); 
     //Shoot!
     draw_text_colour(self.x, self.y, "SHOOT!", c_gray, c_gray, c_gray, c_gray, 1);
-    show_message("SHOOT!");
+    //show_message("SHOOT!");
     //draw_text(x, y, "SHOOT!");
     }
 }
