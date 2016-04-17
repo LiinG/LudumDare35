@@ -53,6 +53,10 @@
     <scripts name="Metamorphosable Scripts">
       <script>scripts\scr_metamorphoser.gml</script>
     </scripts>
+    <scripts name="Animals Scripts">
+      <script>scripts\scr_bee.gml</script>
+      <script>scripts\scr_nearest_instance.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_wall</object>
@@ -69,6 +73,8 @@
       <object>objects\obj_test</object>
       <object>objects\obj_rock</object>
       <object>objects\obj_test2</object>
+      <object>objects\obj_flower_blue</object>
+      <object>objects\obj_flower_purple</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_beach1</object>
@@ -83,11 +89,15 @@
     </objects>
     <objects name="Animals">
       <object>objects\obj_dear</object>
+      <object>objects\obj_bee</object>
+      <object>objects\obj_animal</object>
+      <object>objects\obj_animal_2</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_test</room>
+    <room>rooms\rm_menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
