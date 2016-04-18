@@ -49,6 +49,13 @@
     <sprite>sprites\spr_bord_bl_sea</sprite>
     <sprite>sprites\spr_bord_tl_sea</sprite>
     <sprite>sprites\spr_bord_tr_sea</sprite>
+    <sprite>sprites\spr_shell</sprite>
+    <sprite>sprites\spr_deadfish</sprite>
+    <sprite>sprites\spr_bord_diag_tl</sprite>
+    <sprite>sprites\spr_bord_diag_tr</sprite>
+    <sprite>sprites\spr_bord_diag_br</sprite>
+    <sprite>sprites\spr_bord_diag_bl</sprite>
+    <sprite>sprites\spr_tree</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -88,8 +95,11 @@
     </objects>
     <objects name="Metamorphosable">
       <object>objects\obj_test</object>
+      <object>objects\obj_tree</object>
       <object>objects\obj_rock</object>
       <object>objects\obj_flower_red</object>
+      <object>objects\obj_shell</object>
+      <object>objects\obj_dead_fish</object>
       <object>objects\obj_flower_white</object>
       <object>objects\obj_test2</object>
     </objects>
@@ -113,6 +123,10 @@
       <object>objects\obj_bord_bl_sea</object>
       <object>objects\obj_bord_tl_sea</object>
       <object>objects\obj_bord_tr_sea</object>
+      <object>objects\obj_bord_diag_tl_sea</object>
+      <object>objects\obj_bord_diag_tr_sea</object>
+      <object>objects\obj_bord_diag_br_sea</object>
+      <object>objects\obj_bord_diag_bl_sea</object>
       <object>objects\obj_desert</object>
       <object>objects\obj_sea</object>
       <object>objects\obj_beach2</object>
@@ -130,6 +144,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
+    <room>rooms\rm_gamerandom</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_menu</room>
   </rooms>
