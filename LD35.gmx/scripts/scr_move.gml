@@ -19,6 +19,7 @@ if(obj_player.player_metamorphose = 1){
     if(run){
         obj_player.sprite_index = spr_test_player;
         obj_player.player_metamorphose = 0;
+        obj_player.cooldown = 0;
     }
 }else{
 

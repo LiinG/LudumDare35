@@ -95,7 +95,7 @@ health = breath;
 if(cooldown &lt; 100){
     cooldown = cooldown + 0.5;
 }
-
+/*
 if(player_metamorphose = 1){
     if(breath &gt; 0){
         breath = breath -0.5 - stress;
@@ -103,7 +103,7 @@ if(player_metamorphose = 1){
         sprite_index = spr_test_player;
         player_metamorphose = 0;
     }
-}
+}*/
 </string>
           </argument>
         </arguments>

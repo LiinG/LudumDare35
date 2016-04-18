@@ -159,6 +159,7 @@
       <object>objects\obj_bee</object>
       <object>objects\obj_animal</object>
       <object>objects\obj_animal_2</object>
+      <object>objects\obj_bear</object>
     </objects>
   </objects>
   <rooms name="rooms">
