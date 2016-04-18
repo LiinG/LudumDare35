@@ -105,6 +105,12 @@
       <script>scripts\scr_nearest_instance.gml</script>
       <script>scripts\scr_pathFinder_flower.gml</script>
       <script>scripts\scr_pathFinder_bush.gml</script>
+      <script>scripts\scr_pathFinder_bush_fruit.gml</script>
+      <script>scripts\scr_pathFinder_shell.gml</script>
+      <script>scripts\scr_pathFinder_deadfish.gml</script>
+      <script>scripts\scr_pathFinder_rock.gml</script>
+      <script>scripts\scr_pathFinder_tree.gml</script>
+      <script>scripts\scr_pathFinder_cranium.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -120,7 +126,7 @@
       <object>objects\obj_hunter</object>
     </objects>
     <objects name="Metamorphosable">
-      <object>objects\obj_test</object>
+      <object>objects\obj_bush_fruit</object>
       <object>objects\obj_tree</object>
       <object>objects\obj_rock</object>
       <object>objects\obj_flower_red</object>
@@ -128,6 +134,9 @@
       <object>objects\obj_dead_fish</object>
       <object>objects\obj_flower_white</object>
       <object>objects\obj_test2</object>
+      <object>objects\obj_bush</object>
+      <object>objects\obj_deadfish</object>
+      <object>objects\obj_cranium</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_bear_home</object>
@@ -172,6 +181,12 @@
       <object>objects\obj_animal</object>
       <object>objects\obj_animal_2</object>
       <object>objects\obj_bear</object>
+      <object>objects\obj_pelican</object>
+      <object>objects\obj_crabe</object>
+      <object>objects\obj_cow</object>
+      <object>objects\obj_bird</object>
+      <object>objects\obj_vautour</object>
+      <object>objects\obj_scorpio</object>
     </objects>
   </objects>
   <rooms name="rooms">

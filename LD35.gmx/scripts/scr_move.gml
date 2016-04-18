@@ -16,6 +16,9 @@ var run = keyboard_check(vk_space);
 //var jump_release = keyboard_check_released(ord("D"));
 
 if(obj_player.player_metamorphose = 1){
+    if(breath <100){
+        breath = breath + 1;
+    }
     if(run){
         obj_player.sprite_index = spr_test_player;
         obj_player.player_metamorphose = 0;

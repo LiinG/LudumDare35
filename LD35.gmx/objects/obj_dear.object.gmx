@@ -31,6 +31,8 @@ in_action_cpt = random(60) + 150; //compteur action en cours
 move_cpt = random(40) + 50;
 tmp_x = 0;
 tmp_y = 0;
+eat_player = 0;
+player_cpt = 60;
 
 statut = 0; //0=promenade / 1=recherche ressource / 2=en cours d'action
 
@@ -54,7 +56,7 @@ statut = 0; //0=promenade / 1=recherche ressource / 2=en cours d'action
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>50</string>
+            <string>240</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -154,33 +156,71 @@ if(statut == 0){ //promenade
         //tmp_y = id_tmp.y;
         //show_message(tmp_x + " " + tmp_y);
         //re-déclencher compteur pour prochaine action
-        action_cpt = random(450); //+ 500;
+        action_cpt = random(450) + 500;
     }
 }else if(statut == 1){//recherche ressource
      //show_message(id_tmp.x + " " + id_tmp.y);
     //recherche plus proche ressource
     
-    //id_tmp = scr_nearest_instance(self.x, self.y, obj_flower_blue, 1);
-    id_tmp = instance_nearest(self.x, self.y, obj_test);
-    
-    tmp_x = id_tmp.x;
-    tmp_y = id_tmp.y;
+    //id_tmp = scr_nearest_instance(self.x, self.y, obj_flower_red, 1);
+    //tmp_x = id_tmp.x;
+    //tmp_y = id_tmp.y;
+    id_tmp = instance_nearest(self.x, self.y, obj_bush_fruit);
+    //show_message(id_tmp.x + " " + id_tmp.y);
+    if(obj_player.player_metamorphose == 1 &amp;&amp; obj_player.sprite_index == spr_bush_fruit){
+        if(distance_to_object(id_tmp) &gt;= distance_to_object(obj_player)){
+            tmp_x = obj_player.x;
+            tmp_y = obj_player.y;
+            eat_player = 1;
+        }else{
+            tmp_x = id_tmp.x;
+            tmp_y = id_tmp.y;
+            eat_player = 0;
+        }
+    }else{
+        tmp_x = id_tmp.x;
+        tmp_y = id_tmp.y;
+        eat_player = 0;
+    }
     //id_tmp.solid = false;
     //scr_pathFinder(3, obj_player.x, obj_player.y);
     //scr_pathFinder(3, 800, 608);
-    scr_pathFinder_bush(3, tmp_x, tmp_y);
+    scr_pathFinder_bush_fruit(3, tmp_x, tmp_y);
     //show_message(id_tmp.x + " " + id_tmp.y);
-    if(self.x == id_tmp.x &amp;&amp; self.y == id_tmp.y){ //ressource trouvée =&gt; en cours d'action
-        statut = 2;
+    if(eat_player == 1){
+        if(obj_player.player_metamorphose = 1 &amp;&amp; place_meeting(self.x, self.y, obj_player)){ //player spotted
+                obj_player.sprite_index = spr_test_player;
+                obj_player.player_metamorphose = 0;
+                obj_player.cooldown = 0;
+                obj_player.depth = -5;
+                eat_player = 0;
+                /*if(player_cpt &gt; 0){
+                    player_cpt = player_cpt -1;
+                }else{
+                player_cpt = 60;
+                eat_player = 0;
+                }*/
+            statut = 0; //retour promenade
+        }
+    }
+    else if(self.x == id_tmp.x &amp;&amp; self.y == id_tmp.y){ //ressource trouvée =&gt; en cours d'action
+        if(id_tmp.free == 1){
+            statut = 2;
+            id_tmp.free = 0;
+        }else{
+            statut = 0;
+            in_action_cpt = 210;
+        }
     }
 }
 else if(statut == 2){//en cours d'action
     if(in_action_cpt &gt; 0){
         in_action_cpt = in_action_cpt - 1;
+        //show_message(in_action_cpt);
     }else{//fin cours d'action
         statut = 0;
         //re-déclencher compteur pour prochaine action
-        in_action_cpt = random(60) + 150;
+        in_action_cpt = random(100) + 250;
     }
 }
 
@@ -210,7 +250,7 @@ else if(statut == 2){//en cours d'action
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>

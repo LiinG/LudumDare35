@@ -28,10 +28,57 @@
             <string>bear_x = self.x;
 bear_y = self.y;
 home_x = 1024;
-home_y = 960;
-
+home_y = 864;
+go = 0;
 
 bear_call = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>240</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>10</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>go = 1;
 </string>
           </argument>
         </arguments>
@@ -54,11 +101,12 @@ bear_call = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if(obj_player.x == self.x &amp;&amp; obj_player.y == self.y){
+            <string>if(go ==1){
+//if(obj_player.x == self.x &amp;&amp; obj_player.y == self.y){
 if(place_meeting(self.x, self.y, obj_player)){
     obj_player.catched = 1;
     scr_pathFinder(4, home_x, home_y);
-}else if(obj_player.sprite_index == spr_test_player){
+}else if(obj_player.player_metamorphose == 0){
     bear_call = 1;
     bear_x = self.x;
     bear_y = self.y;
@@ -66,6 +114,7 @@ if(place_meeting(self.x, self.y, obj_player)){
 }else{
     bear_call = 0;
     scr_pathFinder(4, home_x, home_y);
+}
 }
 </string>
           </argument>

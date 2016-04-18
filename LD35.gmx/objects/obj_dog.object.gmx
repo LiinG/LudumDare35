@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>hunter_call = 0;
-
+player_cpt = 60;
 player_spotted = 0;
 </string>
           </argument>
@@ -48,7 +48,7 @@ player_spotted = 0;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>50</string>
+            <string>240</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -151,8 +151,18 @@ else if(hunter_call == 1){ //appelé par le chasseur
 }
 //Flairer de près / player camouflé
 else if(distance_to_point(obj_player.x, obj_player.y) &lt; 50 &amp;&amp; obj_player.player_metamorphose == 1){
-    obj_player.stress = 2;
     script_execute(scr_pathFinder, 1, obj_player.x, obj_player.y);
+    if(obj_player.player_metamorphose = 1 &amp;&amp; place_meeting(self.x, self.y, obj_player)){ //player spotted
+            if(player_cpt &gt; 0){
+                player_cpt = player_cpt -1;
+            }else{
+            obj_player.sprite_index = spr_test_player;
+            obj_player.player_metamorphose = 0;
+            obj_player.cooldown = 0;
+            obj_player.depth = -5;
+            player_cpt = 60;
+            }
+    }
 }
 //Flairer zone
 else if(distance_to_point(obj_player.x, obj_player.y) &lt; 200){
@@ -164,7 +174,6 @@ else if(distance_to_point(obj_player.x, obj_player.y) &lt; 200){
 }else if(obj_bear.bear_call == 1){ //appel de l'ours
     script_execute(scr_pathFinder, 3, obj_bear.bear_x, obj_bear.bear_y);
 }else{
-    obj_player.stress = 0;
     obj_dog.player_spotted = 0;
 }
 </string>
@@ -173,56 +182,6 @@ else if(distance_to_point(obj_player.x, obj_player.y) &lt; 200){
       </action>
     </event>
     <event eventtype="4" ename="obj_solid">
-      <action>
-        <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>60</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>2</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_metamorphosable">
       <action>
         <libid>1</libid>
         <id>115</id>

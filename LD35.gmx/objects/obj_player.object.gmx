@@ -31,7 +31,6 @@ vspd = 0;
 breath = 100;
 cooldown = 100;
 state = scr_move;
-stress = 0;
 catched = 0;
 
 player_spotted = 0;
@@ -91,11 +90,12 @@ if(id_tmp.x != 0 &amp;&amp; id_tmp.y != 0){
             <string>if(catched == 1){
     self.x = obj_bear.x;
     self.y = obj_bear.y;
+    self.depth = -6;
     if(self.x == obj_bear.home_x &amp;&amp; self.y == obj_bear.home_y){
         room_restart();
     }
 }else{
-    scr_collision(obj_solid); // Call the move script
+    scr_collision(obj_solid, obj_metamorphosable); // Call the move script
     script_execute(state);
     
     health = breath;
