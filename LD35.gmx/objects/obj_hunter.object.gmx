@@ -185,6 +185,8 @@ else if (dog_call == 1){ //Pisté par le chien
     }else{
         script_execute(scr_pathFinder, 4, pathFinder_x, pathFinder_y);
     }
+}else if(obj_bear.bear_call == 1){ //appel de l'ours
+    script_execute(scr_pathFinder, 3, obj_bear.bear_x, obj_bear.bear_y);
 }else{ //Mode patrouille
     obj_hunter.player_spotted = 0;
 }

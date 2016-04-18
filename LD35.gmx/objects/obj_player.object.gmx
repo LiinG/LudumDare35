@@ -32,6 +32,7 @@ breath = 100;
 cooldown = 100;
 state = scr_move;
 stress = 0;
+catched = 0;
 
 player_spotted = 0;
 player_metamorphose = 0;
@@ -87,23 +88,31 @@ if(id_tmp.x != 0 &amp;&amp; id_tmp.y != 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_collision(obj_solid); // Call the move script
-script_execute(state);
-
-health = breath;
-
-if(cooldown &lt; 100){
-    cooldown = cooldown + 0.5;
-}
-/*
-if(player_metamorphose = 1){
-    if(breath &gt; 0){
-        breath = breath -0.5 - stress;
-    }else{
-        sprite_index = spr_test_player;
-        player_metamorphose = 0;
+            <string>if(catched == 1){
+    self.x = obj_bear.x;
+    self.y = obj_bear.y;
+    if(self.x == obj_bear.home_x &amp;&amp; self.y == obj_bear.home_y){
+        room_restart();
     }
-}*/
+}else{
+    scr_collision(obj_solid); // Call the move script
+    script_execute(state);
+    
+    health = breath;
+    
+    if(cooldown &lt; 100){
+        cooldown = cooldown + 0.5;
+    }
+}
+    /*
+    if(player_metamorphose = 1){
+        if(breath &gt; 0){
+            breath = breath -0.5 - stress;
+        }else{
+            sprite_index = spr_test_player;
+            player_metamorphose = 0;
+        }
+    }*/
 </string>
           </argument>
         </arguments>

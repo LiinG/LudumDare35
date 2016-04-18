@@ -161,6 +161,8 @@ else if(distance_to_point(obj_player.x, obj_player.y) &lt; 200){
     }else{
         script_execute(scr_pathFinder, 1, obj_player.x, obj_player.y);
     }
+}else if(obj_bear.bear_call == 1){ //appel de l'ours
+    script_execute(scr_pathFinder, 3, obj_bear.bear_x, obj_bear.bear_y);
 }else{
     obj_player.stress = 0;
     obj_dog.player_spotted = 0;

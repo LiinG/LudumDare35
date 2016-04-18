@@ -162,6 +162,7 @@ if(statut == 0){ //promenade
     
     //id_tmp = scr_nearest_instance(self.x, self.y, obj_flower_blue, 1);
     id_tmp = instance_nearest(self.x, self.y, obj_test);
+    
     tmp_x = id_tmp.x;
     tmp_y = id_tmp.y;
     //id_tmp.solid = false;
