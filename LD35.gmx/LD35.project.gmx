@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_test_wall</sprite>
     <sprite>sprites\spr_test_hunter</sprite>
@@ -75,12 +77,17 @@
       <sprite>sprites\spr_mouse_normal</sprite>
       <sprite>sprites\spr_green_bar</sprite>
       <sprite>sprites\spr_red_bar</sprite>
+      <sprite>sprites\sprite57</sprite>
+      <sprite>sprites\sprite58</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_test_player</sprite>
     </sprites>
+    <sprite>sprites\sprite59</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background2</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player Scripts">
@@ -188,12 +195,15 @@
       <object>objects\obj_vautour</object>
       <object>objects\obj_scorpio</object>
     </objects>
+    <object>objects\obj_azerty</object>
+    <object>objects\obj_qwerty</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_gamerandom</room>
-    <room>rooms\rm_menu</room>
+    <room>rooms\room4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
