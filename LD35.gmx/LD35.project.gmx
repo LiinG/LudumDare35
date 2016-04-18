@@ -7,57 +7,72 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_test_wall</sprite>
-    <sprite>sprites\spr_test_player</sprite>
     <sprite>sprites\spr_test_hunter</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_test2</sprite>
-    <sprite>sprites\spr_bush</sprite>
-    <sprite>sprites\spr_bush_fruit</sprite>
-    <sprite>sprites\spr_flower_blue</sprite>
-    <sprite>sprites\spr_flower_purple</sprite>
-    <sprite>sprites\spr_flower_red</sprite>
-    <sprite>sprites\spr_flower_white</sprite>
-    <sprite>sprites\spr_mouse_normal</sprite>
-    <sprite>sprites\spr_mouse_target</sprite>
-    <sprite>sprites\spr_dog</sprite>
-    <sprite>sprites\spr_bee</sprite>
     <sprite>sprites\spr_hunter</sprite>
-    <sprite>sprites\spr_beach1</sprite>
-    <sprite>sprites\spr_beach2</sprite>
-    <sprite>sprites\spr_grass</sprite>
-    <sprite>sprites\spr_small_grass_beach</sprite>
-    <sprite>sprites\spr_desert</sprite>
-    <sprite>sprites\spr_bord_l_grass_beach</sprite>
-    <sprite>sprites\spr_bord_t_grass_beach</sprite>
-    <sprite>sprites\spr_bord_r_grass_beach</sprite>
-    <sprite>sprites\spr_bord_b_grass_beach</sprite>
-    <sprite>sprites\spr_bord_diag_tr_grass_beach</sprite>
-    <sprite>sprites\spr_bord_diag_br_grass_beach</sprite>
-    <sprite>sprites\spr_bord_diag_bl_grass_beach</sprite>
-    <sprite>sprites\spr_bord_diag_tl_grass_beach</sprite>
-    <sprite>sprites\spr_bird</sprite>
-    <sprite>sprites\spr_rock</sprite>
-    <sprite>sprites\spr_sea</sprite>
-    <sprite>sprites\spr_dear</sprite>
     <sprite>sprites\spr_test_dog</sprite>
-    <sprite>sprites\spr_bear_home</sprite>
-    <sprite>sprites\spr_bord_sea</sprite>
-    <sprite>sprites\spr_bord_t_sea</sprite>
-    <sprite>sprites\spr_bord_r_sea</sprite>
-    <sprite>sprites\spr_bord_l_sea</sprite>
-    <sprite>sprites\spr_bord_br_sea</sprite>
-    <sprite>sprites\spr_bord_bl_sea</sprite>
-    <sprite>sprites\spr_bord_tl_sea</sprite>
-    <sprite>sprites\spr_bord_tr_sea</sprite>
-    <sprite>sprites\spr_shell</sprite>
-    <sprite>sprites\spr_deadfish</sprite>
-    <sprite>sprites\spr_bord_diag_tl</sprite>
-    <sprite>sprites\spr_bord_diag_tr</sprite>
-    <sprite>sprites\spr_bord_diag_br</sprite>
-    <sprite>sprites\spr_bord_diag_bl</sprite>
-    <sprite>sprites\spr_tree</sprite>
-    <sprite>sprites\spr_red_bar</sprite>
-    <sprite>sprites\spr_green_bar</sprite>
+    <sprites name="Background">
+      <sprites name="Sea">
+        <sprite>sprites\spr_sea</sprite>
+        <sprite>sprites\spr_bord_tr_sea</sprite>
+        <sprite>sprites\spr_bord_br_sea</sprite>
+        <sprite>sprites\spr_bord_tl_sea</sprite>
+        <sprite>sprites\spr_bord_bl_sea</sprite>
+        <sprite>sprites\spr_bord_diag_br</sprite>
+        <sprite>sprites\spr_bord_diag_tr</sprite>
+        <sprite>sprites\spr_bord_diag_bl</sprite>
+        <sprite>sprites\spr_bord_diag_tl</sprite>
+        <sprite>sprites\spr_bord_sea</sprite>
+        <sprite>sprites\spr_bord_t_sea</sprite>
+        <sprite>sprites\spr_bord_r_sea</sprite>
+        <sprite>sprites\spr_bord_l_sea</sprite>
+      </sprites>
+      <sprites name="Beach">
+        <sprite>sprites\spr_beach2</sprite>
+        <sprite>sprites\spr_beach1</sprite>
+      </sprites>
+      <sprites name="Grass">
+        <sprite>sprites\spr_grass</sprite>
+        <sprite>sprites\spr_bord_diag_tr_grass_beach</sprite>
+        <sprite>sprites\spr_bord_diag_br_grass_beach</sprite>
+        <sprite>sprites\spr_bord_diag_tl_grass_beach</sprite>
+        <sprite>sprites\spr_bord_diag_bl_grass_beach</sprite>
+        <sprite>sprites\spr_bord_t_grass_beach</sprite>
+        <sprite>sprites\spr_bord_l_grass_beach</sprite>
+        <sprite>sprites\spr_bord_r_grass_beach</sprite>
+        <sprite>sprites\spr_bord_b_grass_beach</sprite>
+        <sprite>sprites\spr_small_grass_beach</sprite>
+      </sprites>
+      <sprite>sprites\spr_bear_home</sprite>
+    </sprites>
+    <sprites name="Metamorphosable">
+      <sprite>sprites\spr_flower_red</sprite>
+      <sprite>sprites\spr_deadfish</sprite>
+      <sprite>sprites\spr_shell</sprite>
+      <sprite>sprites\spr_bush</sprite>
+      <sprite>sprites\spr_bush_fruit</sprite>
+      <sprite>sprites\spr_flower_purple</sprite>
+      <sprite>sprites\spr_tree</sprite>
+      <sprite>sprites\spr_flower_blue</sprite>
+      <sprite>sprites\spr_rock</sprite>
+      <sprite>sprites\spr_flower_white</sprite>
+    </sprites>
+    <sprites name="Animals">
+      <sprite>sprites\spr_bee</sprite>
+      <sprite>sprites\spr_pedobear</sprite>
+      <sprite>sprites\spr_dear</sprite>
+      <sprite>sprites\spr_bird</sprite>
+    </sprites>
+    <sprites name="HUD">
+      <sprite>sprites\spr_mouse_target</sprite>
+      <sprite>sprites\spr_mouse_normal</sprite>
+      <sprite>sprites\spr_green_bar</sprite>
+      <sprite>sprites\spr_red_bar</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\spr_test_player</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -132,7 +147,6 @@
       <object>objects\obj_bord_diag_tr_sea</object>
       <object>objects\obj_bord_diag_br_sea</object>
       <object>objects\obj_bord_diag_bl_sea</object>
-      <object>objects\obj_desert</object>
       <object>objects\obj_sea</object>
       <object>objects\obj_beach2</object>
       <object>objects\obj_bear_home</object>
