@@ -27,6 +27,42 @@
             <kind>1</kind>
             <string>bear_x = self.x;
 bear_y = self.y;
+home_x = 1024;
+home_y = 960;
+
+
+bear_call = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(obj_player.sprite_index == spr_test_player){
+    bear_call = 1;
+    bear_x = self.x;
+    bear_y = self.y;
+    scr_pathFinder(4, obj_player.x, obj_player.y);
+}else{
+    bear_call = 0;
+    scr_pathFinder(4, home_x, home_y);
+}
 </string>
           </argument>
         </arguments>
