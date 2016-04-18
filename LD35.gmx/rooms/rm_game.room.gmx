@@ -2749,18 +2749,10 @@
     <instance objName="obj_flower_red" x="768" y="928" name="inst_A8B53D61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower_red" x="928" y="1344" name="inst_11DAD2FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower_red" x="480" y="768" name="inst_D26FAB03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_purple" x="768" y="1056" name="inst_05611C11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_purple" x="192" y="1184" name="inst_E049C5FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_purple" x="736" y="1280" name="inst_F68CF4F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_purple" x="896" y="832" name="inst_732BB0B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower_white" x="320" y="1088" name="inst_529D3848" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower_white" x="800" y="1184" name="inst_7AE575D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower_white" x="576" y="896" name="inst_4023F6FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower_white" x="320" y="736" name="inst_825DC17E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_blue" x="480" y="1152" name="inst_BEA11DA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_blue" x="928" y="1120" name="inst_962A9888" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_blue" x="384" y="864" name="inst_47B07E8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flower_blue" x="736" y="800" name="inst_EAC84052" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_small_grass_beach" x="192" y="896" name="inst_D28B9B91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_small_grass_beach" x="128" y="1280" name="inst_1F34BAFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_small_grass_beach" x="160" y="1312" name="inst_00A25AA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

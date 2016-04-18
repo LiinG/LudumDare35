@@ -90,12 +90,8 @@
       <object>objects\obj_test</object>
       <object>objects\obj_rock</object>
       <object>objects\obj_flower_red</object>
-      <object>objects\obj_flower_purple</object>
       <object>objects\obj_flower_white</object>
-      <object>objects\obj_flower_blue</object>
       <object>objects\obj_test2</object>
-      <object>objects\obj_flower_blue</object>
-      <object>objects\obj_flower_purple</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_beach1</object>
@@ -135,10 +131,7 @@
   <rooms name="rooms">
     <room>rooms\rm_game</room>
     <room>rooms\rm_test</room>
-<<<<<<< HEAD
     <room>rooms\rm_menu</room>
-=======
->>>>>>> origin/master
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
