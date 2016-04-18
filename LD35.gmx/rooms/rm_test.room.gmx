@@ -294,6 +294,7 @@ cursor_sprite = spr_mouse_normal;</code>
     <instance objName="obj_flower_red" x="832" y="384" name="inst_3F2DD1FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dear" x="640" y="480" name="inst_F661FD1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_breath" x="256" y="64" name="inst_F94DC4F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bear" x="672" y="352" name="inst_0328644A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -3,6 +3,7 @@ if (obj_player.catched == 0 && !place_meeting(obj_player.x, obj_player.y, obj_so
         obj_player.sprite_index = self.sprite_index;
         //obj_player.player_spotted = 0;
         obj_player.player_metamorphose = 1;
+        obj_player.depth = -4;
         obj_player.vspd = 0;
         obj_player.hspd = 0;
     }

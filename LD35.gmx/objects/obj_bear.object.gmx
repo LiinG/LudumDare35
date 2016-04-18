@@ -54,7 +54,8 @@ bear_call = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_player.x == self.x &amp;&amp; obj_player.y == self.y){
+            <string>//if(obj_player.x == self.x &amp;&amp; obj_player.y == self.y){
+if(place_meeting(self.x, self.y, obj_player)){
     obj_player.catched = 1;
     scr_pathFinder(4, home_x, home_y);
 }else if(obj_player.sprite_index == spr_test_player){
