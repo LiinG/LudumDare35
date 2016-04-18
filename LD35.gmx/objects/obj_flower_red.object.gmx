@@ -51,7 +51,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(scr_metamorphoser);
+            <string>if(obj_player.cooldown == 100){
+    script_execute(scr_metamorphoser);
+}
 </string>
           </argument>
         </arguments>
