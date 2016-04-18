@@ -3,7 +3,11 @@
   <spriteName>spr_flower_blue</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
+<<<<<<< HEAD
   <depth>0</depth>
+=======
+  <depth>-5</depth>
+>>>>>>> origin/master
   <persistent>0</persistent>
   <parentName>obj_metamorphosable</parentName>
   <maskName>&lt;undefined&gt;</maskName>

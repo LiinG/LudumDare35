@@ -25,13 +25,30 @@
     <sprite>sprites\spr_beach1</sprite>
     <sprite>sprites\spr_beach2</sprite>
     <sprite>sprites\spr_grass</sprite>
+    <sprite>sprites\spr_small_grass_beach</sprite>
     <sprite>sprites\spr_desert</sprite>
-    <sprite>sprites\spr_grass_hill</sprite>
+    <sprite>sprites\spr_bord_l_grass_beach</sprite>
+    <sprite>sprites\spr_bord_t_grass_beach</sprite>
+    <sprite>sprites\spr_bord_r_grass_beach</sprite>
+    <sprite>sprites\spr_bord_b_grass_beach</sprite>
+    <sprite>sprites\spr_bord_diag_tr_grass_beach</sprite>
+    <sprite>sprites\spr_bord_diag_br_grass_beach</sprite>
+    <sprite>sprites\spr_bord_diag_bl_grass_beach</sprite>
+    <sprite>sprites\spr_bord_diag_tl_grass_beach</sprite>
     <sprite>sprites\spr_bird</sprite>
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_sea</sprite>
     <sprite>sprites\spr_dear</sprite>
     <sprite>sprites\spr_test_dog</sprite>
+    <sprite>sprites\spr_bear_home</sprite>
+    <sprite>sprites\spr_bord_sea</sprite>
+    <sprite>sprites\spr_bord_t_sea</sprite>
+    <sprite>sprites\spr_bord_r_sea</sprite>
+    <sprite>sprites\spr_bord_l_sea</sprite>
+    <sprite>sprites\spr_bord_br_sea</sprite>
+    <sprite>sprites\spr_bord_bl_sea</sprite>
+    <sprite>sprites\spr_bord_tl_sea</sprite>
+    <sprite>sprites\spr_bord_tr_sea</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -72,17 +89,38 @@
     <objects name="Metamorphosable">
       <object>objects\obj_test</object>
       <object>objects\obj_rock</object>
+      <object>objects\obj_flower_red</object>
+      <object>objects\obj_flower_purple</object>
+      <object>objects\obj_flower_white</object>
+      <object>objects\obj_flower_blue</object>
       <object>objects\obj_test2</object>
       <object>objects\obj_flower_blue</object>
       <object>objects\obj_flower_purple</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_beach1</object>
-      <object>objects\obj_grass_hill</object>
+      <object>objects\obj_small_grass_beach</object>
+      <object>objects\obj_bord_l_grass_beach</object>
+      <object>objects\obj_bord_t_grass_beach</object>
+      <object>objects\obj_bord_r_grass_beach</object>
+      <object>objects\obj_bord_b_grass_beach</object>
+      <object>objects\obj_bord_diag_bl_grass_beach</object>
+      <object>objects\obj_bord_diag_br_grass_beach</object>
+      <object>objects\obj_bord_diag_tr_grass_beach</object>
+      <object>objects\obj_bord_diag_tl_grass_beach</object>
       <object>objects\obj_grass</object>
+      <object>objects\obj_bord_b_sea</object>
+      <object>objects\obj_bord_t_sea</object>
+      <object>objects\obj_bord_r_sea</object>
+      <object>objects\obj_bord_l_sea</object>
+      <object>objects\obj_bord_br_sea</object>
+      <object>objects\obj_bord_bl_sea</object>
+      <object>objects\obj_bord_tl_sea</object>
+      <object>objects\obj_bord_tr_sea</object>
       <object>objects\obj_desert</object>
       <object>objects\obj_sea</object>
       <object>objects\obj_beach2</object>
+      <object>objects\obj_bear_home</object>
     </objects>
     <objects name="Dog">
       <object>objects\obj_dog</object>
@@ -97,7 +135,10 @@
   <rooms name="rooms">
     <room>rooms\rm_game</room>
     <room>rooms\rm_test</room>
+<<<<<<< HEAD
     <room>rooms\rm_menu</room>
+=======
+>>>>>>> origin/master
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
