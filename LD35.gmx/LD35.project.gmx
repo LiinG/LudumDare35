@@ -56,6 +56,8 @@
     <sprite>sprites\spr_bord_diag_br</sprite>
     <sprite>sprites\spr_bord_diag_bl</sprite>
     <sprite>sprites\spr_tree</sprite>
+    <sprite>sprites\spr_red_bar</sprite>
+    <sprite>sprites\spr_green_bar</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -146,8 +148,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
-    <room>rooms\rm_test</room>
     <room>rooms\rm_gamerandom</room>
+    <room>rooms\rm_test</room>
     <room>rooms\rm_menu</room>
   </rooms>
   <help>
