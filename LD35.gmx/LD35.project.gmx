@@ -56,14 +56,19 @@
       <sprite>sprites\spr_bush</sprite>
       <sprite>sprites\spr_bush_fruit</sprite>
       <sprite>sprites\spr_tree</sprite>
+      <sprite>sprites\spr_cranium</sprite>
       <sprite>sprites\spr_rock</sprite>
     </sprites>
     <sprites name="Animals">
       <sprite>sprites\spr_bee</sprite>
+      <sprite>sprites\spr_pelican</sprite>
+      <sprite>sprites\spr_crab</sprite>
+      <sprite>sprites\spr_cow</sprite>
       <sprite>sprites\spr_dear</sprite>
       <sprite>sprites\spr_bird</sprite>
+      <sprite>sprites\spr_vautour</sprite>
+      <sprite>sprites\spr_scorpio</sprite>
       <sprite>sprites\spr_pedobear</sprite>
-      <sprite>sprites\spr_pelican</sprite>
     </sprites>
     <sprites name="HUD">
       <sprite>sprites\spr_mouse_target</sprite>
