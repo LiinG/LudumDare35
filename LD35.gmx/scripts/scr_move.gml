@@ -26,6 +26,47 @@ if(obj_player.player_metamorphose = 1){
         breath = breath + 1;
     }
     
+    if (right && up) {
+        if(run && breath > 4){
+            hspd = (spd + 4)/2;
+            vspd = (-spd - 4)/2;
+            breath = breath - 5;
+        }else{
+            hspd = spd/2;
+            vspd = -spd/2;
+        }
+    }
+    else if (left && up) {
+        if(run && breath > 4){
+            hspd = (-spd - 4)/2;
+            vspd = (-spd - 4)/2;
+            breath = breath - 5;
+        }else{
+            hspd = -spd/2;
+            vspd = -spd/2;
+        }
+    }
+    else if (left && down) { // Set player's speed
+        if(run && breath > 4){
+            hspd = (-spd - 4)/2;
+            vspd = (spd + 4)/2;
+            breath = breath - 5;
+        }else{
+            hspd = -spd/2;
+            vspd = spd/2;
+        }
+    }
+    else if (right && down) {
+        if(run && breath > 4){
+            hspd = (spd + 4)/2;
+            vspd = (spd + 4)/2;
+            breath = breath - 5;
+        }else{
+            hspd = spd/2;
+            vspd = spd/2;
+        }
+    }else {
+    
     if (right) { // Set player's speed
         if(run && breath > 4){
             hspd = spd + 4;
@@ -71,4 +112,5 @@ if(obj_player.player_metamorphose = 1){
     if(!up && !down){ // Friction
         vspd = 0;
     }
+}
 }

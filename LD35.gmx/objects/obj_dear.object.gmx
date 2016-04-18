@@ -7,7 +7,214 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>lookMode = 0; //recherche ressource
+action_cpt = random(450)// + 500; //compteur rechargement action
+in_action_cpt = random(60) + 150; //compteur action en cours
+move_cpt = random(40) + 50;
+tmp_x = 0;
+tmp_y = 0;
+
+statut = 0; //0=promenade / 1=recherche ressource / 2=en cours d'action
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>50</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>9</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="9">
+      <action>
+        <libid>1</libid>
+        <id>102</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_motion</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>random(360)</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>random(40)+30</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>9</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*id_tmp = instance_nearest(self.x, self.y, obj_flower);
+if(id_tmp != noone){
+    if(&amp;&amp; id_tmp.free == 1){
+        script_execute(scr_pathFinder(3, id_tmp.x, id_tmp.y));
+    }else{
+        //scr_nearest_instance(self.x, self.y, obj_flower, n);
+    }
+}*/
+//scr_pathFinder(3, obj_player.x, obj_player.y);
+if(statut == 0){ //promenade
+    if(action_cpt &gt; 0){
+        action_cpt = action_cpt - 1;
+        //show_message(action_tmp);
+    }else{//fin promenade
+        //rechercher ressource
+        statut = 1;
+        //var id_tmp;
+        //id_tmp = instance_nearest(self.x, self.y, obj_flower_blue);
+        //id_tmp.solid = false;
+        //id_tmp = scr_nearest_instance(self.x, self.y, obj_flower_blue, 1);
+        //tmp_x = id_tmp.x;
+        //tmp_y = id_tmp.y;
+        //show_message(tmp_x + " " + tmp_y);
+        //re-déclencher compteur pour prochaine action
+        action_cpt = random(450); //+ 500;
+    }
+}else if(statut == 1){//recherche ressource
+     //show_message(id_tmp.x + " " + id_tmp.y);
+    //recherche plus proche ressource
+    
+    //id_tmp = scr_nearest_instance(self.x, self.y, obj_flower_blue, 1);
+    id_tmp = instance_nearest(self.x, self.y, obj_test);
+    tmp_x = id_tmp.x;
+    tmp_y = id_tmp.y;
+    //id_tmp.solid = false;
+    //scr_pathFinder(3, obj_player.x, obj_player.y);
+    //scr_pathFinder(3, 800, 608);
+    scr_pathFinder_bush(3, tmp_x, tmp_y);
+    //show_message(id_tmp.x + " " + id_tmp.y);
+    if(self.x == id_tmp.x &amp;&amp; self.y == id_tmp.y){ //ressource trouvée =&gt; en cours d'action
+        statut = 2;
+    }
+}
+else if(statut == 2){//en cours d'action
+    if(in_action_cpt &gt; 0){
+        in_action_cpt = in_action_cpt - 1;
+    }else{//fin cours d'action
+        statut = 0;
+        //re-déclencher compteur pour prochaine action
+        in_action_cpt = random(60) + 150;
+    }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_solid">
+      <action>
+        <libid>1</libid>
+        <id>115</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_bounce</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

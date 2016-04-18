@@ -33,6 +33,7 @@ tmp_x = 0;
 tmp_y = 0;
 
 statut = 0; //0=promenade / 1=recherche ressource / 2=en cours d'action
+
 </string>
           </argument>
         </arguments>
@@ -160,13 +161,13 @@ if(statut == 0){ //promenade
     //recherche plus proche ressource
     
     //id_tmp = scr_nearest_instance(self.x, self.y, obj_flower_blue, 1);
-    id_tmp = instance_nearest(self.x, self.y, obj_flower_blue);
+    id_tmp = instance_nearest(self.x, self.y, obj_flower_red);
     tmp_x = id_tmp.x;
     tmp_y = id_tmp.y;
     //id_tmp.solid = false;
     //scr_pathFinder(3, obj_player.x, obj_player.y);
     //scr_pathFinder(3, 800, 608);
-    scr_pathFinder(3, tmp_x, tmp_y);
+    scr_pathFinder_flower(3, tmp_x, tmp_y);
     //show_message(id_tmp.x + " " + id_tmp.y);
     if(self.x == id_tmp.x &amp;&amp; self.y == id_tmp.y){ //ressource trouvée =&gt; en cours d'action
         statut = 2;

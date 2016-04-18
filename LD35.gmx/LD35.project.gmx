@@ -80,6 +80,8 @@
     <scripts name="Animals Scripts">
       <script>scripts\scr_bee.gml</script>
       <script>scripts\scr_nearest_instance.gml</script>
+      <script>scripts\scr_pathFinder_flower.gml</script>
+      <script>scripts\scr_pathFinder_bush.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -144,8 +146,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
-    <room>rooms\rm_gamerandom</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_gamerandom</room>
     <room>rooms\rm_menu</room>
   </rooms>
   <help>
