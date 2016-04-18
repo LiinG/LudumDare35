@@ -22,7 +22,7 @@ if(obj_player.player_metamorphose = 1){
     }
 }else{
 
-    if(!run || breath < 5 ){
+    if((!run || breath < 5) && breath <100 ){
         breath = breath + 1;
     }
     
