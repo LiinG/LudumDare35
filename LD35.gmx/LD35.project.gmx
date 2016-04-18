@@ -91,6 +91,7 @@
     <objects name="Player">
       <object>objects\obj_player</object>
       <object>objects\obj_flaque</object>
+      <object>objects\obj_breath</object>
     </objects>
     <objects name="Hunter">
       <object>objects\obj_hunter</object>

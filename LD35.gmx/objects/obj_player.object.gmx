@@ -89,6 +89,8 @@ if(id_tmp.x != 0 &amp;&amp; id_tmp.y != 0){
             <string>scr_collision(obj_solid); // Call the move script
     script_execute(state);
 
+health = breath;
+    
 if(player_metamorphose = 1){
     if(breath &gt; 0){
         breath = breath -1 - stress;
