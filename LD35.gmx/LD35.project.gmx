@@ -199,13 +199,15 @@
     </objects>
     <object>objects\obj_azerty</object>
     <object>objects\obj_qwerty</object>
+    <object>objects\obj_replay</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_gamerandom</room>
-    <room>rooms\room4</room>
+    <room>rooms\rm_catch</room>
+    <room>rooms\rm_lose</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
