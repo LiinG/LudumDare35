@@ -124,8 +124,11 @@ player_spotted = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Repéré
-if(distance_to_point(obj_player.x, obj_player.y) &lt; 100 &amp;&amp; (obj_dog.player_spotted == 1 || obj_player.sprite_index == spr_test_player)){
+            <string>if(obj_hunter.catched == 1){
+    script_execute(scr_pathFinder, 5, obj_hunter.x, obj_hunter.y);
+}
+//Repéré
+else if(distance_to_point(obj_player.x, obj_player.y) &lt; 100 &amp;&amp; (obj_dog.player_spotted == 1 || obj_player.sprite_index == spr_test_player)){
     obj_hunter.pathFinder_x = self.x;
     obj_hunter.pathFinder_y = self.y;
     obj_hunter.dog_call = 1;

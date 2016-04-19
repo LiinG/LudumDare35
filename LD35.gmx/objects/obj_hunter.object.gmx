@@ -30,6 +30,7 @@ pathFinder_y = obj_player.y;
 dog_call = 0;
 player_spotted = 0;
 piste = 0;
+catched = 0;
 </string>
           </argument>
         </arguments>
@@ -126,7 +127,11 @@ piste = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(distance_to_point(obj_player.x, obj_player.y) &lt; 100 &amp;&amp; (obj_hunter.player_spotted == 1 || obj_player.sprite_index == spr_test_player)){ //Repéré
+            <string>if(catched ==1){
+    self.x = obj_bear.x;
+    self.y = obj_bear.y;
+    self.depth = -6;
+}else if(distance_to_point(obj_player.x, obj_player.y) &lt; 100 &amp;&amp; (obj_hunter.player_spotted == 1 || obj_player.sprite_index == spr_test_player)){ //Repéré
     pathFinder_x = obj_player.x;
     pathFinder_y = obj_player.y;
     obj_hunter.player_spotted = 1;

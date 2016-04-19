@@ -8,9 +8,14 @@ var down = keyboard_check(vk_down);
 var jump = keyboard_check(ord("D"));
 var jump_release = keyboard_check_released(ord("D"));*/
 
+if(global.mode_clavier == 0){//azerty
+    var left = keyboard_check(ord("Q"));
+    var up = keyboard_check(ord("Z"));
+}else{//qwerty
+    var left = keyboard_check(ord("A"));
+    var up = keyboard_check(ord("W"));
+}
 var right = keyboard_check(ord("D"));
-var left = keyboard_check(ord("Q"));
-var up = keyboard_check(ord("Z"));
 var down = keyboard_check(ord("S"));
 var run = keyboard_check(vk_space);
 //var jump_release = keyboard_check_released(ord("D"));

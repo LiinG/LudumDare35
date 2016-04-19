@@ -1,15 +1,15 @@
 ///move(collision_object)
 var collision_object = argument0;
 var collision_object2 = argument1;
-var hspd_tmp = 0;
-var vspd_tmp = 0;
+hspd_tmp = 0;
+vspd_tmp = 0;
 
 
 // Horizontal collisions
 
 if(hspd < 0){
     hspd_tmp = -1;
-}else if(hpsd > 0){
+}else if(hspd > 0){
     hspd_tmp = +1;
 }
 
