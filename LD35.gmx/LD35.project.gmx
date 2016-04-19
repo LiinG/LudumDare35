@@ -79,14 +79,16 @@
       <sprite>sprites\spr_red_bar</sprite>
       <sprite>sprites\sprite57</sprite>
       <sprite>sprites\sprite58</sprite>
+      <sprite>sprites\sprite61</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_test_player</sprite>
     </sprites>
-    <sprite>sprites\sprite59</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background2</background>
+    <background>background\bkg_title</background>
+    <background>background\bkg_catch</background>
+    <background>background\bkg_lose</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
